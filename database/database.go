@@ -8,7 +8,7 @@ import (
 
 var DB *gorm.DB
 
-func ConectarBancoDeDados() {
+func DatabaseConnection() {
     database, err := gorm.Open(sqlite.Open("libraryGolang.db"), &gorm.Config{})
     if err != nil {
         panic("Error trying to connect to database: " + err.Error())
